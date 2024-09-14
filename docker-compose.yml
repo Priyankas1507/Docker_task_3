@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nginx:
+    image: priyankadoc15/custom-nginx
+    container_name: custom-nginx
+    ports:
+      - "8080:80"  # Maps host port 8080 to container's port 80
+    volumes:
+      - ./nginx_data:/var/opt/nginx  # Bind the current directory to /var/opt/nginx in the container
+
